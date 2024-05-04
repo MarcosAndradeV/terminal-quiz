@@ -5,22 +5,21 @@
 using std::string, std::cout;
 
 void show(std::vector<string> options);
-bool option_chose(int opt);
+void option_chose(int opt);
 
 int main(int argc, char *argv[]) {
 
   int opt;
   do {
     std::vector<string> options = {
-        "",
+        "op1",
         "op2",
         "op3",
     };
     show(options);
-    cout << "Selecione uma opção.\n";
+    cout << "Selecione uma opção. (Use 0 para sair)\n";
     std::cin >> opt;
-    if (!option_chose(opt))
-      break;
+    option_chose(opt);
   } while (opt != 0);
 
   return 0;
@@ -34,7 +33,7 @@ void show(std::vector<string> options) {
   }
 }
 
-bool option_chose(int opt) {
+void option_chose(int opt) {
   switch (opt) {
   case 1:
     cout << "1\n";
@@ -46,8 +45,7 @@ bool option_chose(int opt) {
     cout << "3\n";
     break;
   default:
-    cout << "Invalid option\n";
-    return false;
+    cout << "Opção invalida\n";
+    break;
   }
-  return true;
 }
