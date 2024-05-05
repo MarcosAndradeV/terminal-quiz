@@ -33,8 +33,10 @@ void show(std::vector<string> options) {
   }
 }
 
-void option_chose(int opt) {
+inline void option_chose(int opt) {
   switch (opt) {
+  case 0:
+    break;
   case 1:
     cout << "1\n";
     break;
