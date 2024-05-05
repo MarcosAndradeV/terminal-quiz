@@ -2,6 +2,5 @@
 
 ```console
 $ cmake -S . -B build/
-$ cd build/ && make
-$ ./terquiz
+$ cd build/ && make && ./terquiz
 ``` 
